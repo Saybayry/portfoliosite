@@ -1,0 +1,73 @@
+<!doctype html>
+   {% load static %}
+   {% load bootstrap %}
+<html lang="en">
+  <head>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css'%} ">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Headers · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+
+
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="{% static 'base.css'%} ">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+
+
+
+  </head>
+  <body>
+        <header class="header">
+        <!-- Logo -->
+        <a href="{% url "portfolio:index"  %}" class="logo"><img src="https://sun9-57.userapi.com/impg/0_PvkGeSOWfXGL1MpHskM1AmLNaM0DjrYBbVlA/ev5BB8NSLxs.jpg?size=733x723&quality=96&sign=eb006d04538b822d570cbbd3d54fe154&type=album" width="64" height="64"></a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="{% url "portfolio:index"  %}">Главная</a></li>
+                <li><a href="{% url "portfolio:index"  %}">Вход</a> </li>
+                <li><a href="{% url "portfolio:autor"  %}">Авторы</a> </li>
+                <li><a href="{% url "portfolio:album"  %}">Альбомы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+
+    {% endblock content %}
+
+    тут нижняя
+  </body>
