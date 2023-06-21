@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="box">
+
+    <div class="box">
+        <div class="proposal-box">
+        <h1>Заказать дизайн</h1>
+            <p style="color: #ffffff">опишите ваш проект и оставте контактные данные, мы с вами свяжемся</p>
+        <form action="{% url 'userProfile:profile' %}" method='post'>
+        {% csrf_token %}
+        {{ form.textProposal }}
+        <button name = "submit" class="login btn-block" >отправить</button>
+        </form>
+        </div>
+        <br>
+        <a href="{% url "userProfile:logoutt"  %}"> <div  class="login btn-block"  style="width:30%;">выйти</div></a>
+    </div>
+
+
+</div>
+
+<style>
+    a.text:active, /* активная/посещенная ссылка */
+    a.text:hover,  /* при наведении */
+    a.text {
+      text-decoration: none;
+      color: #666;
+    }
+    a {
+        color: black;
+        }
+        .proposal-box textarea{
+                  width:100%;
+          background-color: #616161;
+          border-radius: 10px;
+        }
+
+        .proposal-box h1 {
+          margin: 0 0 30px; padding: 0;color: #fff;
+          text-align: center;font-size: 26px;
+        }
+
+        .proposal-box {
+          width: 500px;padding: 20px;
+          background:  transparent;
+          overflow: hidden;z-index: 1;
+              margin-left: auto;
+                margin-right: auto;
+        }
+
+        .proposal-box h1 {
+          margin: 0 0 30px; padding: 0;color: #fff;
+          text-align: center;font-size: 26px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+          .proposal {
+          width:100%;
+          background-color: #616161;
+          border-radius: 10px;
+          }
+          .box {
+          width: 700px;
+          box-sizing: border-box;
+          overflow: hidden;padding: 2px;
+            }
+        .box :: before, .box :: after {
+          content: " ";position: absolute;
+          top: -50%;left: -50%; z-index: 0;
+          width: 350px;height: 350px;
+          background:  transparent;
+          transform-origin: bottom right;
+          animation: login 5s linear infinite;
+
+            }
+
+        .login {
+            border-radius:3px;
+            background: #616161;
+            height: 30px;
+            width: 100%
+        }
+
+
+        button {
+        border-radius:3px;
+        background: #616161
+        }
+</style>
+{% endblock content %}

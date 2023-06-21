@@ -57,7 +57,18 @@
         <nav class="nav">
             <ul class="menu">
                 <li><a href="{% url "portfolio:index"  %}">Главная</a></li>
-                <li><a href="{% url "portfolio:index"  %}">Вход</a> </li>
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url "userProfile:profile"  %}">Профиль</a> </li>
+                {% else %}
+                <li><a href="{% url "userProfile:login"  %}">Вход</a> </li>
+                {% endif %}
+
+
+
+
+
+
                 <li><a href="{% url "portfolio:autor"  %}">Авторы</a> </li>
                 <li><a href="{% url "portfolio:album"  %}">Альбомы</a></li>
             </ul>
@@ -69,5 +80,4 @@
 
     {% endblock content %}
 
-    тут нижняя
   </body>

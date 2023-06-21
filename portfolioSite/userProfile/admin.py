@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Proposal # наша модель из blog/models.py
 
-# Register your models here.
+admin.site.register(Proposal)
